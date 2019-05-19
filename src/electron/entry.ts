@@ -6,7 +6,7 @@ import { app, BrowserWindow } from 'electron';
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
 
-const isElectronDev = () => process.mainModule.filename.indexOf('app.asar') === -1;
+const isElectronDev = () => !process.mainModule.filename.includes('app.asar');
 
 function createWindow() {
   win = new BrowserWindow({

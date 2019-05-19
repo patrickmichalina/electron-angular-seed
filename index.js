@@ -1,4 +1,4 @@
-const isElectronDev = () => process.mainModule.filename.indexOf('app.asar') === -1;
+const isElectronDev = () => !process.mainModule.filename.includes('app.asar');
 
 if (isElectronDev()) {
   require('ts-node').register(); // This will register the TypeScript compiler
