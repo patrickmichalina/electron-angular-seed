@@ -2,7 +2,7 @@ import { reader } from 'typescript-monads';
 import { IAppConfig } from '../config/config';
 import { App, app, BrowserWindow } from 'electron';
 
-export const read1 = reader<IAppConfig, App>(config => {
+export const appReader = () => reader<IAppConfig, App>(config => {
   // This method will be called when Electron has finished
   // initialization and is ready to create browser windows.
   // Some APIs can only be used after this event occurs.
