@@ -1,12 +1,15 @@
 import { join } from 'path';
 import { format } from 'url';
 import { app, BrowserWindow } from 'electron';
+import { isPlatformMac } from './util/platform';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win;
+let win: BrowserWindow;
 
 const isElectronDev = () => !process.mainModule.filename.includes('app.asar');
+
+console.log(isPlatformMac());
 
 function createWindow() {
   win = new BrowserWindow({
