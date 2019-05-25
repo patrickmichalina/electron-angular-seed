@@ -1,7 +1,7 @@
 import { join } from 'path';
 import { format } from 'url';
 import { app, BrowserWindow } from 'electron';
-import { windowReader } from './main/window'
+import { windowReader } from './main/window';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
